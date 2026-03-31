@@ -17,7 +17,7 @@ while ($true) {
             $cpuStats = Get-CimInstance Win32_Processor | Measure-Object -Property LoadPercentage -Average
             $cpu = "{0:N2}" -f $cpuStats.Average
             
-            # Usar formatação de string na expressão da RAM
+            
             $mem = Get-CimInstance Win32_OperatingSystem | Select-Object @{Name="Uso_RAM";Expression={"{0:N2}" -f ((($_.TotalVisibleMemorySize - $_.FreePhysicalMemory) / $_.TotalVisibleMemorySize) * 100)}}
             
             Write-Host "Utilizacao de CPU: $cpu %"
@@ -41,7 +41,7 @@ while ($true) {
             try {
                 New-ADOrganizationalUnit -Name $nomeOU -Path $dominio -ErrorAction Stop
             } catch {
-                # Se a OU ja existir, ele ignora o erro e continua
+
             }
             
             Write-Host "A criar o utilizador $nome dentro da OU $nomeOU..." -ForegroundColor Cyan
