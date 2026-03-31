@@ -43,8 +43,8 @@ while ($true) {
         }
         '6' {
             Write-Host "`n--- ULTIMOS LOGS DO SISTEMA ---" -ForegroundColor Green
-            # Novo: Mostra os últimos 5 logs do Sistema
-            Get-WinEvent -LogName System -MaxEvents 5 | Select-Object TimeCreated, LevelDisplayName, ProviderName | Format-Table -AutoSize
+            
+            Get-WinEvent -LogName System -MaxEvents 5 | Select-Object TimeCreated, LevelDisplayName, ProviderName, Message | Format-Table -AutoSize
             Read-Host "`nPressione ENTER para voltar ao menu..."
         }
         '0' {
