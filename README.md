@@ -25,8 +25,8 @@ Este Projeto em Scripts feitos em PowerShell, para Automatizar Processos No Wind
   <tr>
 
     * Fazer "git clone " do Repositorio Para o Servidor.
-    * Preferencia ou Opcional, Criar um Atalho de Cada Script para o Ambiente de Trabalho ou Apenas Botão Direito e 
-      Executar com a PowerShell.
+    * Preferencia ou Opcional, Criar um Atalho de Cada Script para o Ambiente de Trabalho ou 
+      Apenas Botão Direito e Executar com a PowerShell.
     * Por Fim, Executar Cada Script e Ver a Magia Acontecer.
 
   </tr>
